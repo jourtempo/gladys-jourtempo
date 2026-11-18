@@ -6,8 +6,8 @@
     "en": "EJP days, PP peak days and EDF Tempo colour, today and tomorrow. No key needed.",
     "fr": "Jours EJP, jours PP et couleur Tempo d'aujourd'hui et de demain. Sans clé ni compte."
   },
-  "version": "1.0.0",
-  "docker_image": "ghcr.io/jourtempo/gladys-jourtempo:1.0.0",
+  "version": "1.0.1",
+  "docker_image": "ghcr.io/jourtempo/gladys-jourtempo:1.0.1",
   "gladys_version": ">=4.86.0",
   "cover_image": "https://raw.githubusercontent.com/jourtempo/gladys-jourtempo/main/cover.png",
   "categories": ["energy"],

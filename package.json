@@ -1,6 +1,6 @@
 {
   "name": "gladys-jourtempo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Jour Tempo pour Gladys Assistant : jours EJP, jours PP et couleur Tempo, depuis l'API gratuite de jourtempo.fr.",
   "type": "module",
