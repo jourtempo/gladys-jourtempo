@@ -1,0 +1,65 @@
+{
+  "manifest_version": 1,
+  "type": "device",
+  "name": "Jour Tempo",
+  "description": {
+    "en": "EJP days, PP peak days and EDF Tempo colour, today and tomorrow. No key needed.",
+    "fr": "Jours EJP, jours PP et couleur Tempo d'aujourd'hui et de demain. Sans clé ni compte."
+  },
+  "version": "1.0.0",
+  "docker_image": "ghcr.io/jourtempo/gladys-jourtempo:1.0.0",
+  "gladys_version": ">=4.86.0",
+  "cover_image": "https://raw.githubusercontent.com/jourtempo/gladys-jourtempo/main/cover.png",
+  "categories": ["energy"],
+  "transports": ["cloud"],
+  "config_schema": [
+    {
+      "key": "intro",
+      "type": "section",
+      "label": { "en": "Data", "fr": "Données" },
+      "description": {
+        "en": "Data comes from the free jourtempo.fr API (EJP: EDF calendar; PP: RTE signals; Tempo: RTE), read every 15 minutes. No account, no API key. Gladys already shows the Tempo colour natively: the Tempo device is optional.",
+        "fr": "Les données viennent de l'API gratuite de jourtempo.fr (EJP : calendrier publié par EDF ; PP : signaux de RTE ; Tempo : RTE), lue toutes les 15 minutes. Pas de compte, pas de clé. Gladys affiche déjà la couleur Tempo : l'appareil Tempo est facultatif."
+      },
+      "links": [
+        {
+          "url": "https://jourtempo.fr/api/",
+          "label": { "en": "API documentation", "fr": "Documentation de l'API" }
+        }
+      ]
+    },
+    {
+      "key": "suivre_ejp",
+      "type": "boolean",
+      "label": { "en": "EJP days", "fr": "Jours EJP" },
+      "description": {
+        "en": "EJP day today and tomorrow, EJP days left.",
+        "fr": "Jour EJP aujourd'hui et demain, jours EJP restants."
+      },
+      "required": false,
+      "default": true
+    },
+    {
+      "key": "suivre_pp",
+      "type": "boolean",
+      "label": { "en": "PP peak days", "fr": "Jours PP" },
+      "description": {
+        "en": "PP peak day (capacity mechanism) today and tomorrow, PP days left.",
+        "fr": "Jour de pointe PP (mécanisme de capacité) aujourd'hui et demain, jours PP restants."
+      },
+      "required": false,
+      "default": true
+    },
+    {
+      "key": "suivre_tempo",
+      "type": "boolean",
+      "label": { "en": "Tempo colour", "fr": "Couleur Tempo" },
+      "description": {
+        "en": "Tempo colour today and tomorrow, red/white tomorrow alerts, days left.",
+        "fr": "Couleur Tempo aujourd'hui et demain, alertes demain rouge ou blanc, jours restants."
+      },
+      "required": false,
+      "default": false
+    }
+  ]
+}
