@@ -10,7 +10,7 @@ Documentation : [docs/fr.md](docs/fr.md) (en anglais : [docs/en.md](docs/en.md))
 
 ## Installation
 
-Dans Gladys (4.86 ou plus récent) : **Intégrations**, catalogue communautaire, **Jour Tempo**, **Installer**. Ou ajoutez l'adresse de ce dépôt.
+Dans Gladys (5.3 ou plus récent) : **Intégrations**, catalogue communautaire, **Jour Tempo**, **Installer**. Ou ajoutez l'adresse de ce dépôt.
 
 ## Développement
 
