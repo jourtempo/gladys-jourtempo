@@ -18,6 +18,7 @@ const pkg = JSON.parse(await readFile(new URL('../package.json', import.meta.url
 // release accepting them. The store validator refuses a manifest whose
 // `gladys_version` minimum is lower: these tests catch it before a release.
 const CATEGORIES_MIN_GLADYS_VERSION = [4, 86, 0];
+const COUNTRIES_MIN_GLADYS_VERSION = [5, 3, 0];
 
 // Minimum version of the manifest `gladys_version` range, e.g. [5, 1, 0].
 function minGladysVersion() {
@@ -105,4 +106,14 @@ test('the catalog description holds 10 to 100 characters per language', () => {
       `description.${lang} has ${text.length} characters (10 to 100 allowed)`,
     );
   }
+});
+
+test('the catalog countries: France, which needs Gladys >= 5.3.0', () => {
+  // EJP, PP and Tempo are French tariffs: the store hides the integration from
+  // the browse views of instances located elsewhere.
+  assert.deepEqual(manifest.countries, ['FR']);
+  assert.ok(
+    isAtLeast(minGladysVersion(), COUNTRIES_MIN_GLADYS_VERSION),
+    `countries requires gladys_version >= 5.3.0, got "${manifest.gladys_version}"`,
+  );
 });
